@@ -37,7 +37,7 @@ user_pass = "no"
 computer_pass = "no"
 
 # Start Round...
-print ("Press <enter> to begin this round: ")
+print("Press <enter> to begin this round: ")
 input()
 
 # Get initial dice rolls for user
@@ -94,6 +94,8 @@ while computer_points < 13 and user_points < 13:
     # If computer has 10 or more (and is winning), It should pass!
     if computer_points >= 10 and computer_points >= user_points:
         computer_pass = "yes"
+    elif computer_pass == "yes":
+        pass
 
     else:
         # Roll die for computer and update computer points
@@ -149,5 +151,3 @@ elif user_points > computer_points:
 else:
     print(f"😎😎😎The result for this round is a tie. You and the computer"
           f"both have {user_points}.😎😎😎")
-
-
